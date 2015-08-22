@@ -11,6 +11,11 @@ group :development do
  gem "tux"
 end
 
+group :test do
+  gem "rspec"
+  gem "rack-test"
+end
+
 group :production do
  gem 'pg'
 end
