@@ -30,7 +30,7 @@ end
 post '/' do
   @post = Post.new(parmas[:post])
   @post.save
-  redirect '/panel'
+  redirect '/'
 end
 
 get "/posts/create" do

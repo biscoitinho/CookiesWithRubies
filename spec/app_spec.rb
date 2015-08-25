@@ -17,7 +17,13 @@ describe 'App' do
   end
 
   it "should not load the panel page" do
-    get '/panel'
+    get '/posts'
     expect(last_response).to_not be_ok
+  end
+
+  it "renders create post page" do
+    get '/posts/create'
+    expect(last_response).to be_ok
+    expect(last_response.body).to include("Create Post")
   end
 end
