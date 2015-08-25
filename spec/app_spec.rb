@@ -26,4 +26,9 @@ describe 'App' do
     expect(last_response).to be_ok
     expect(last_response.body).to include("Create Post")
   end
+
+  it "renders create post page" do
+    get '/posts/1'
+    expect(last_response).to_not be_ok
+  end
 end
